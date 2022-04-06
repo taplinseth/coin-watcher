@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 4000;
 const cors = require("cors");
-const api = require('../routes/api');
-const authRouter = require('../routes/auth');
+// const api = require('../routes/api');
+// const authRouter = require('../routes/auth');
 
 // app.use(express.static('public'));
 // app.use(bodyParser.urlencoded({ extended:false}));
