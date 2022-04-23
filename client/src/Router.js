@@ -1,8 +1,6 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router'
 import cookie from 'cookie'
-
-import Home from './components/Home'
 import Login from './components/Login'
 
 const checkAuth = () => {
@@ -26,10 +24,8 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 const Router = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/login" element={<Login/>} />
-            {/* <Route path="/watchlist" element={<Watchlist/>} />
-            <Route path="/top100" element={<Top100/>} /> */}
+            <Route path="/" element={<Login/>} />
+            <Route path="/coins" element={<Login/>} />
         </Routes>
     );
 };

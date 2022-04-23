@@ -16,16 +16,6 @@ export default function Navigation() {
       let path = `/`; 
       navigate(path);
     }
-
-    const routeWatchlist = () =>{ 
-        let path = `/watchlist`; 
-        navigate(path);
-    }
-
-    const routeTop100 = () =>{ 
-        let path = `/top100`; 
-        navigate(path);
-    }
   
     const routeLogin = () =>{ 
       let path = `/login`; 
@@ -45,11 +35,9 @@ export default function Navigation() {
           >
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            **app name**
+            Coin Watcher
           </Typography>
           <Button onClick={routeHome} color="inherit">Home</Button>
-          <Button onClick={routeWatchlist} color="inherit">Watchlist</Button>
-          <Button onClick={routeTop100} color="inherit">Top 100</Button>
           <Button onClick={routeLogin} color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
