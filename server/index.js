@@ -1,10 +1,20 @@
 const express = require("express");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
+// const usersRouter = require('./routers/users');
+const authRouter = require('./routers/auth');
+const { logger } = require('./middleware')
+
 const app = express();
 const port = process.env.PORT || 4000;
-const cors = require("cors");
-// const api = require('../routes/api');
-// const authRouter = require('../routes/auth');
+
+app.use(bodyParser.json())
+app.use(logger)
+// app.use('/users', usersRouter)
+app.use('/auth', authRouter)
+
+app.get('/', (req, res) => {
+  res.send('Welcome to our server!')
+})
 
 app.listen(port, () => {
  console.log(`Web server is listening on port ${port}!`);
