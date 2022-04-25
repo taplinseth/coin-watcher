@@ -36,3 +36,99 @@
     transform: rotate(360deg);
   }
 }
+
+.NavBar {
+  background-color: #011245;
+}
+
+#banner {
+  width: 100%;
+  z-index: -1;
+}
+
+#root > header > div {
+  background-color: #011245;
+}
+
+#home-header {
+  color: #705433;
+  position: fixed;
+  z-index: 1;
+  margin: 50px
+}
+
+.nav-list-item {
+  list-style-type: none;
+}
+
+#root > header > div > ul > li:nth-child(2) > div > button {
+  background-color: #705433;
+  border-color: #705433;
+}
+
+#root > header > div > ul > li:nth-child(1) > div > button {
+  background-color: #705433;
+  border-color: #705433;
+}
+#root > header > div > h6 > a {
+  color: #705433;
+  text-decoration: none;
+}
+
+body > div.MuiDialog-root.dialog > div.MuiDialog-container.MuiDialog-scrollPaper > div {
+  background-color: #011245;
+  color: #705433;
+  text-align: center;
+}
+
+body > div.MuiDialog-root.dialog > div.MuiDialog-container.MuiDialog-scrollPaper > div > div > form > button {
+  background-color: #705433;
+}
+
+#root > div > div > div > div.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular.css-14covj4-MuiToolbar-root {
+  background-color: #011245;
+}
+
+#root > div > div > div > div.MuiTableContainer-root.css-rorn0c-MuiTableContainer-root > table {
+  background-color: #011245;
+}
+
+#root > div > div > div > div.MuiTableContainer-root.css-rorn0c-MuiTableContainer-root > table > tbody > tr > td {
+  color: #705433;
+}
+
+#enhanced-table-names {
+  color:#705433;
+}
+
+#root > div > div > div > div.MuiTableContainer-root.css-rorn0c-MuiTableContainer-root > table > thead > tr > th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignLeft.MuiTableCell-paddingNone.MuiTableCell-sizeMedium.css-10dfkli-MuiTableCell-root > span {
+  color:#705433;
+  margin-left: 10px;
+}
+
+#root > div > div > div > div.MuiTableContainer-root.css-rorn0c-MuiTableContainer-root > table > thead > tr > th > span {
+  color: #705433
+}
+
+#root > div > div > div > div.MuiTableContainer-root.css-rorn0c-MuiTableContainer-root > table > thead > tr > th > span > svg > path {
+  color: #705433
+}
+
+#root > div > div > div > div.MuiTablePagination-root.css-jtlhu6-MuiTablePagination-root > div {
+  background-color: #011245;
+  color:#705433;
+}
+
+#root > header > div > ul > li > button {
+  background-color: #705433;
+  text-decoration: none;
+}
+
+#root > header > div > ul > li > button > a {
+  color: black;
+  text-decoration: none;
+}
+
+#mui-2 {
+  color: #705433;
+}

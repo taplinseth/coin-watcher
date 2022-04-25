@@ -56,6 +56,12 @@ function stableSort(array, comparator) {
 
 const headCells = [
   {
+    id: 'icon',
+    numeric: false,
+    disablePadding: true,
+    label: '',
+  },
+  {
     id: 'name',
     numeric: false,
     disablePadding: true,
@@ -168,7 +174,6 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Nutrition
         </Typography>
       )}
 
@@ -181,7 +186,6 @@ const EnhancedTableToolbar = (props) => {
       ) : (
         <Tooltip title="Filter list">
           <IconButton>
-            <FilterListIcon />
           </IconButton>
         </Tooltip>
       )}
@@ -264,6 +268,8 @@ export default function EnhancedTable() {
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - coins.length) : 0;
+  
+
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -290,25 +296,27 @@ export default function EnhancedTable() {
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
                   const isItemSelected = isSelected(row.name);
-                  const labelId = `enhanced-table-checkbox-${index}`;
+                  const labelId = 'enhanced-table-names';
 
                   return (
                     <TableRow
                       hover
-                      onClick={(event) => handleClick(event, row.name)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
                       key={row.name}
                       selected={isItemSelected}
+                      padding="10px"
                     >
+                      <TableCell>
+                        <img src={row.image} width="40px"></img>
+                      </TableCell>
                       <TableCell
                         component="th"
                         id={labelId}
                         scope="row"
-                        padding="none"
+                        padding="10px"
                       >
-                      <img src={row.image} width="50px"></img>
                         {row.name}
                       </TableCell>
                       <TableCell align="right">{row.current_price}</TableCell>

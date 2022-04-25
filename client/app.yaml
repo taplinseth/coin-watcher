@@ -1,0 +1,4 @@
+runtime: nodejs14
+
+env_variables:
+  CLOUD_INSTANCE: coin-watcher-348223:us-central1:coin-watcher

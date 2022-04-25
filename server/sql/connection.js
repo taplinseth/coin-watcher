@@ -11,7 +11,8 @@ class Connection {
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
         password: process.env.DB_PASSWORD,
-        database: process.env.DB_DEFAULT_SCHEMA
+        database: process.env.DB_DEFAULT_SCHEMA,
+        port: process.env.DB_PORT
       }
 
       if (process.env.NODE_ENV === 'production' && process.env.CLOUD_INSTANCE) {
