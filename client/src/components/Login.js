@@ -15,7 +15,7 @@ const Login = (props) => {
 
   const login = (e) => {
     e.preventDefault();
-    Axios.post('https://gleaming-modem-343016.uc.r.appspot.com/users/login', {
+    Axios.post('https://gleaming-modem-343016.uc.r.appspot.com/users', {
       email: email,
       password: pass
     }).then((res) => {
