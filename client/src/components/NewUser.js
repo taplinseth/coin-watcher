@@ -16,7 +16,7 @@ const NewUser = () => {
   const register = (e) => {
     e.preventDefault();
     console.log(nameReg, emailReg, passReg)
-    Axios.post('https://cryptic-headland-94862.herokuapp.com/https://gleaming-modem-343016.uc.r.appspot.com/users', {
+    Axios.post('https://gleaming-modem-343016.uc.r.appspot.com/users', {
       name: nameReg,
       email: emailReg,
       password: passReg
