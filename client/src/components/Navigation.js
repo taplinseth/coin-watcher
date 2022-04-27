@@ -30,6 +30,11 @@ const Navigation = (props) => {
                     <Link to={'/'} onClick={(e) => {updateStatus(false)}}>Logout</Link>
                   </button>
                 </li>
+                <li className="nav-list-item">
+                  <button color="primary">
+                    <Link to={'/crypto'} >Crypto</Link>
+                  </button>
+                </li>
               </ul>
               )}
           </Toolbar>

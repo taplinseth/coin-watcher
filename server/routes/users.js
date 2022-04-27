@@ -6,8 +6,8 @@ router.get('/', usersController.getAllUsers)
 
 router.get('/:id', usersController.getUserById)
 
-router.post('/', usersController.createUser)
+router.post('/', checkJWt, usersController.createUser)
 
-router.put('/:id', usersController.updateUserById)
+router.put('/:id', checkJwt, usersController.updateUserById)
 
 module.exports = router

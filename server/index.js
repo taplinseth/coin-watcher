@@ -8,17 +8,11 @@ const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 4000;
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(logger)
 app.use('/auth', authRouter)
 app.use('/users', usersRouter)
-
-const corsOptions ={
-  origin:'https://coin-watcher-deployment-k6dv15p99-taplinseth.vercel.app/', 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
-}
-app.use(cors(corsOptions))
 
 
 app.get('/', (req, res) => {
@@ -29,5 +23,5 @@ app.listen(port, () => {
  console.log(`Web server is listening on port ${port}!`);
 });
 
-
+//https://coin-watcher-deployment-k6dv15p99-taplinseth.vercel.app/
 // https://gleaming-modem-343016.uc.r.appspot.com/

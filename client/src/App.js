@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Navigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { Routes, Route } from 'react-router';
 // import Router from './Router';
@@ -23,7 +23,7 @@ function App() {
   }
 
   return (
-      <BrowserRouter>
+    <BrowserRouter>
         <Navigation setUsername={setUsername} updateStatus={updateStatus} setUserID={setUserID} userID={userID} username={username} loggedIn={loggedIn}/>
         <Routes>
             <Route exact path="/" element={<Home loggedIn={loggedIn} userID={userID}/>} />

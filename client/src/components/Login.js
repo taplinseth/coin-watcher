@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import Axios from 'axios';
 import { Button, Dialog, DialogContent } from '@material-ui/core';
 
@@ -32,6 +33,10 @@ const Login = (props) => {
     })
   }
 
+  const clicked = () => {
+    <Navigate to="/crypto"  replace={true} />
+  }
+  
 
 
   return (

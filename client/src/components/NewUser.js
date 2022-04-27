@@ -4,10 +4,10 @@ import { Dialog, DialogContent } from '@material-ui/core';
 
 const NewUser = () => {
   const [open, setOpen] = useState(false);
-  const [nameReg, setNameReg] = useState('')
+  const [firstNameReg, setFirstNameReg] = useState('')
+  const [lastNameReg, setLastNameReg] = useState('')
   const [emailReg, setEmailReg] = useState('')
   const [passReg, setPassReg] = useState('')
-
   
   const handleToggle = () => {
     setOpen(!open);
@@ -15,9 +15,10 @@ const NewUser = () => {
 
   const register = (e) => {
     e.preventDefault();
-    console.log(nameReg, emailReg, passReg)
+    console.log(firstNameReg, lastNameReg, emailReg, passReg)
     Axios.post('https://gleaming-modem-343016.uc.r.appspot.com/users', {
-      name: nameReg,
+      firstName: firstNameReg,
+      lastName: lastNameReg,
       email: emailReg,
       password: passReg
     }).then((res) => {
@@ -37,10 +38,15 @@ const NewUser = () => {
         <DialogContent dividers>
         <form className='form'
           style={{ display: 'flex', flexDirection: 'column', width: '350px' }}>
-          <label>Name</label>
+          <label>First Name</label>
           <input 
-              id="name" 
-              onChange={(e) => {setNameReg(e.target.value)}} 
+              id="first_name" 
+              onChange={(e) => {setFirstNameReg(e.target.value)}} 
+              required />
+          <label>Last Name</label>
+          <input 
+              id="last_name" 
+              onChange={(e) => {setLastNameReg(e.target.value)}} 
               required />
           <label>Email</label>
           <input 
