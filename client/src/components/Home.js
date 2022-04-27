@@ -1,39 +1,13 @@
-import React, {Component} from 'react';
-import '../App.css';
-import Hometable from './Hometable';
-
-const axios = require('axios');
+import React from 'react';
 
 
+const Home = () => {
+    return (
+        <div>
+                <h1 id='home-header'>Welcome to my app. Please create an account or login to view current coin information.</h1>
+            <img id='banner' src={require('./image.png')}></img>
+        </div>
+    )
+}
 
-export default class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            BTC_Array: []
-        }
-    }
-
-    componentDidMount = () => {
-        this.getBTC();
-    }
-
-    getBTC = () => {
-        axios.get('https://cryptic-headland-94862.herokuapp.com/https://gleaming-modem-343016.uc.r.appspot.com/users')
-            .then((response) => {
-                const BTC_Array = response.data
-                this.setState({ BTC_Array })
-                console.log(BTC_Array)
-            })
-            .catch((error) => {
-                console.log("error");
-            })
-    }
-
-    render() {
-        return (
-            <div>
-                <Hometable />
-            </div>
-        )
-    }}
+export default Home;

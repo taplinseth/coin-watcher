@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router';
 // import Router from './Router';
 import Navigation from './components/Navigation';
 import Crypto from './components/Crypto';
-import Home from './components/Home 2';
+import Home from './components/Home';
 import cookie from 'cookie'
 
 
