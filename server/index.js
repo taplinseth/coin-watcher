@@ -14,7 +14,7 @@ app.use('/auth', authRouter)
 app.use('/users', usersRouter)
 
 const corsOptions ={
-  origin:'http://localhost:3000', 
+  origin:'https://coin-watcher-deployment-k6dv15p99-taplinseth.vercel.app/', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
