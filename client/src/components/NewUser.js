@@ -16,7 +16,7 @@ const NewUser = () => {
   const register = (e) => {
     e.preventDefault();
     console.log(firstNameReg, lastNameReg, emailReg, passReg)
-    Axios.post('https://gleaming-modem-343016.uc.r.appspot.com/users', {
+    Axios.post('https://coral-firefly-352315.uc.r.appspot.com/users', {
       firstName: firstNameReg,
       lastName: lastNameReg,
       email: emailReg,

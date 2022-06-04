@@ -24,4 +24,4 @@ app.listen(port, () => {
 });
 
 //https://coin-watcher-deployment-k6dv15p99-taplinseth.vercel.app/
-// https://gleaming-modem-343016.uc.r.appspot.com/
+//https://coral-firefly-352315.uc.r.appspot.com/
