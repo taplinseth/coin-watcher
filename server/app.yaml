@@ -2,4 +2,4 @@
 runtime: nodejs14
 
 env_variables:
-  CLOUD_INSTANCE: gleaming-modem-343016:us-central1:coin-watcher
+  CLOUD_INSTANCE: coral-firefly-352315:us-central1:coin-watcher
